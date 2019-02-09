@@ -1,0 +1,5 @@
+
+script:
+    - ls -al
+    - uname -a
+    
