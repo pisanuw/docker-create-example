@@ -7,33 +7,35 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  hello:
 
     runs-on: ubuntu-latest
     steps:
     - name: Hello World
       run: echo "hello World"
 
+  check-versions:
     - name: clang++ version
       run: clang++ --version
-    
+
     # - name: clang-tidy version
     #   run: clang-tidy --version
 
     - name: clang-format version
       run: clang-format --version
 
-    - name: Cache LLVM and Clang
-      id: cache-llvm
-      uses: actions/cache@v2
-      with:
-        path: ~/.clang
-        key: llvm-10.0
+  # install-llvm:
+  #   - name: Cache LLVM and Clang
+  #     id: cache-llvm
+  #     uses: actions/cache@v2
+  #     with:
+  #       path: ~/.clang
+  #       key: llvm-10.0
 
-    - name: Install LLVM and Clang
-      uses: KyleMayes/install-llvm-action@v1
-      with:
-        version: "10.0"
-        directory: ~/.clang
-        cached: ${{ steps.cache-llvm.outputs.cache-hit }}
+  #   - name: Install LLVM and Clang
+  #     uses: KyleMayes/install-llvm-action@v1
+  #     with:
+  #       version: "10.0"
+  #       directory: ~/.clang
+  #       cached: ${{ steps.cache-llvm.outputs.cache-hit }}
 
