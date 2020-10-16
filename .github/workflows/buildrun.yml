@@ -8,12 +8,14 @@ on:
 
 jobs:
   hello:
-
     runs-on: ubuntu-latest
     steps:
     - name: Hello World
       run: echo "hello World"
 
+software-versions:
+  runs-on: ubuntu-latest
+  steps:
     - name: clang++ version
       run: clang++ --version
 
