@@ -8,31 +8,5 @@ jobs:
     steps:
       - name: My first job
       - run: echo "hello World"
-  software-versions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: clang++ --version
-      - run: clang-format --version
-        
-  install-clang-tidy:
-    runs-on: ubuntu-latest
-    steps:
-      - run: sudo apt-get install --yes clang-tidy
-      - run: clang-tidy --version
 
-
-  # install-llvm:
-  #   - name: Cache LLVM and Clang
-  #     id: cache-llvm
-  #     uses: actions/cache@v2
-  #     with:
-  #       path: ~/.clang
-  #       key: llvm-10.0
-
-  #   - name: Install LLVM and Clang
-  #     uses: KyleMayes/install-llvm-action@v1
-  #     with:
-  #       version: "10.0"
-  #       directory: ~/.clang
-  #       cached: ${{ steps.cache-llvm.outputs.cache-hit }}
 
