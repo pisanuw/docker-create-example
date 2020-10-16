@@ -7,9 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-    - uses: actions/checkout@v2
-    - name: Run create-output.sh file
-      run: chmod 755 create-output.sh; ./create-output.sh
       
     - name: clang++ version
       run: clang++ --version
