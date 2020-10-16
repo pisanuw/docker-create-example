@@ -3,22 +3,23 @@ name: Tester
 on: [push]
 
 jobs:
-  hello:
+  check-versions:
     runs-on: ubuntu-latest
-    name: Hello World
-    continue-on-error: true
+    timeout-minutes: 3
     steps:
-      - run: echo "hello World"
-  software-versions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: clang++ --version
-      - run: clang-format --version
-  clang-tidy-versions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: sudo apt-get install clang-tidy
-      - run: clang-tidy --version
+    - uses: actions/checkout@v2
+    - name: Run create-output.sh file
+      run: chmod 755 create-output.sh; ./create-output.sh
+      
+    - name: clang++ version
+      run: clang++ --version
+      
+    - name: clang-format version
+      run: clang-format --version
+        
+
+
+
             
 
 
