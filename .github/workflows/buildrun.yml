@@ -1,10 +1,6 @@
 name: Tester
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 
 jobs:
   hello:
@@ -15,19 +11,13 @@ jobs:
   software-versions:
     runs-on: ubuntu-latest
     steps:
-      - name: clang++ version
       - run: clang++ --version
-    
-      - name: clang-format version
       - run: clang-format --version
         
   install-clang-tidy:
     runs-on: ubuntu-latest
     steps:
-      - name: clang-tidy install
       - run: sudo apt-get install --yes clang-tidy
-      
-      - name: clang-tidy version
       - run: clang-tidy --version
 
 
