@@ -10,20 +10,26 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-    - name: Hello World
-      run: echo "hello World"
+      - name: My first job
+      - run: echo "hello World"
+  software-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clang++ version
+      - run: clang++ --version
+    
+      - name: clang-format version
+      - run: clang-format --version
+        
+  install-clang-tidy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clang-tidy install
+      - run: sudo apt-get install --yes clang-tidy
+      
+      - name: clang-tidy version
+      - run: clang-tidy --version
 
-software-versions:
-  runs-on: ubuntu-latest
-  steps:
-    - name: clang++ version
-      run: clang++ --version
-
-    # - name: clang-tidy version
-    #   run: clang-tidy --version
-
-    - name: clang-format version
-      run: clang-format --version
 
   # install-llvm:
   #   - name: Cache LLVM and Clang
