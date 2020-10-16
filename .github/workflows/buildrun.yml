@@ -17,8 +17,8 @@ jobs:
     - name: clang++ version
       run: clang++ --version
     
-    - name: clang-tidy version
-      run: clang-tidy --version
+    # - name: clang-tidy version
+    #   run: clang-tidy --version
 
     - name: clang-format version
       run: clang-format --version
