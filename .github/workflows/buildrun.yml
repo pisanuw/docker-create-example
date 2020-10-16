@@ -12,8 +12,13 @@ jobs:
   software-versions:
     runs-on: ubuntu-latest
     steps:
-      - run: clang++ --verson
+      - run: clang++ --version
       - run: clang-format --version
+  clang-tidy-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo apt-get install clang-tidy
+      - run: clang-tidy --version
             
 
 
