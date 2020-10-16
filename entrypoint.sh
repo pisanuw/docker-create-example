@@ -2,7 +2,7 @@
 
 sudo apt-get instal -qq clang-tidy
 
-clang-tidy --version
+which clang-tidy
 
 echo "Hello $1"
 time=$(date)
