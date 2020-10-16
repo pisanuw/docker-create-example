@@ -1,0 +1,10 @@
+name: clang-tidy and friends
+description: Automatically checks
+author: ArtificialAmateur
+branding:
+  icon: alert-circle
+  color: green
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  
