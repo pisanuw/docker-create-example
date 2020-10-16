@@ -1,3 +1,5 @@
+name: Setup Docker
+
 on: [push]
 
 jobs:
