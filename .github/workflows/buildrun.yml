@@ -11,17 +11,16 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-
     - name: Hello World
       run: echo "hello World"
 
-install-clang:
     - name: Cache LLVM and Clang
       id: cache-llvm
       uses: actions/cache@v2
       with:
         path: ~/.clang
         key: llvm-10.0
+
     - name: Install LLVM and Clang
       uses: KyleMayes/install-llvm-action@v1
       with:
