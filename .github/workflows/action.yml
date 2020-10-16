@@ -1,3 +1,5 @@
+on: [push]
+
 name: clang-tidy and friends
 description: Automatically checks
 author: ArtificialAmateur
