@@ -15,7 +15,7 @@ jobs:
       run: clang-format --version
       
     - name: install clang-tidy
-      run: sudo apt-get install --yes --quiet clang=tidy
+      run: sudo apt-get install --yes --quiet clang-tidy
       
     - name: clang-tidy version
       run: clang-tidy --version
