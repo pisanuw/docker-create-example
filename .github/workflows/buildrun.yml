@@ -5,8 +5,15 @@ on: [push]
 jobs:
   hello:
     runs-on: ubuntu-latest
+    name: Hello World
+    continue-on-error: true
     steps:
-      - name: My first job
       - run: echo "hello World"
+  software-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: clang++ --verson
+      - run: clang-format --version
+            
 
 
