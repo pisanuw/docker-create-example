@@ -14,10 +14,10 @@ jobs:
     - name: clang-format version
       run: clang-format --version
 
-    - name: c-linter
-      uses: ArtificialAmateur/clang-tidy-action@master
-    env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#     - name: c-linter
+#       uses: ArtificialAmateur/clang-tidy-action@master
+#     env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
 #     - name: install clang-tidy
