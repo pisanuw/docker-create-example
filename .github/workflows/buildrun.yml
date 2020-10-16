@@ -14,17 +14,17 @@ jobs:
     - name: clang-format version
       run: clang-format --version
       
-    - name: install clang-tidy
-      run: sudo apt-get -qq update; sudo apt-get install -qq clang-tidy
+#     - name: install clang-tidy
+#       run: sudo apt-get -qq update; sudo apt-get install -qq clang-tidy
       
-    - name: clang-tidy version
-      run: clang-tidy --version
+#     - name: clang-tidy version
+#       run: clang-tidy --version
       
-    - name: install valgrind
-      run: sudo apt-get install --yes --quiet valgrind
+#     - name: install valgrind
+#       run: sudo apt-get install --yes --quiet valgrind
       
-    - name: valgrind version
-      run: valgrind --version
+#     - name: valgrind version
+#       run: valgrind --version
         
 
 
