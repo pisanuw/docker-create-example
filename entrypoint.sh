@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-# sudo apt-get instal -qq clang-tidy
+sudo apt-get instal -qq clang-tidy
 
 echo "Hello World from entrypoint"
 
