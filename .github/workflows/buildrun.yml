@@ -1,36 +1,19 @@
-name: Tester
+# name: Tester
 
-on: [push]
+# on: [push]
 
-jobs:
-  check-versions:
-    runs-on: ubuntu-latest
-    timeout-minutes: 3
-    steps:
+# jobs:
+#   check-versions:
+#     runs-on: ubuntu-latest
+#     timeout-minutes: 3
+#     steps:
       
-    - name: clang++ version
-      run: clang++ --version
+#     - name: clang++ version
+#       run: clang++ --version
       
-    - name: clang-format version
-      run: clang-format --version
+#     - name: clang-format version
+#       run: clang-format --version
 
-#     - name: c-linter
-#       uses: ArtificialAmateur/clang-tidy-action@master
-#     env:
-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
-#     - name: install clang-tidy
-#       run: sudo apt-get -qq update; sudo apt-get install -qq clang-tidy
-      
-#     - name: clang-tidy version
-#       run: clang-tidy --version
-      
-#     - name: install valgrind
-#       run: sudo apt-get install --yes --quiet valgrind
-      
-#     - name: valgrind version
-#       run: valgrind --version
         
 
 
