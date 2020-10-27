@@ -2,7 +2,7 @@
 FROM ubuntu
 
 RUN apt-get update
-RUN apt-get -qq -y clang-tidy
+RUN apt-get -qq -y install clang-tidy
 
 COPY entrypoint.sh /entrypoint.sh
 
